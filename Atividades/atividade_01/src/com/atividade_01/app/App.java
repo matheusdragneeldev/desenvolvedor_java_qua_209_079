@@ -8,8 +8,7 @@ public class App {
         // Instacia o objeto Scanner
         Scanner leia = new Scanner(System.in);
 
-        String nome;
-        String condicaoImc = "";
+        String nome, diagnostico;
         int opcao = 0;
         double altura, peso, resultadoImc;
 
@@ -36,25 +35,24 @@ public class App {
                 peso = leia.nextDouble();
 
                 resultadoImc = peso / (altura*altura);
+            
+                // ternario
+                diagnostico = (resultadoImc < 18.5) ? nome + " está abaixo do peso."
+                : (resultadoImc < 25) ? nome + " está com peso normal."
+                : (resultadoImc < 30) ? nome + " está com sobrepeso"
+                : (resultadoImc < 35) ? nome + " está obeso."
+                : (resultadoImc < 40) ? nome + " está com obesidade nivel II."
+                : nome + " está com obesidade mórbida.";
 
-                if (resultadoImc < 18.5) {
-                    condicaoImc = "Abaixo do peso.";
-                } else if (resultadoImc >= 18.5 && resultadoImc <= 24.9) {
-                    condicaoImc = "Peso normal.";
-                } else if (resultadoImc >= 25 && resultadoImc <= 29.9) {
-                    condicaoImc = "Sobrepeso.";
-                } else if (resultadoImc >= 30 && resultadoImc <= 34.9) {
-                    condicaoImc = "Obesidade grau I.";
-                } else if (resultadoImc >= 35 && resultadoImc <= 39.9) {
-                    condicaoImc = "Obesidade grau II.";
-                } else {
-                    condicaoImc = "Obesidade grau III.";
-                }
-
-                System.out.println("Seu IMC é " + resultadoImc + ". Sua condição é: " + condicaoImc);
+                System.out.println("---------------");
+                System.out.println("IMC: " + String.format("%.2f", resultadoImc));
+                System.out.println(diagnostico);
+                System.out.println("---------------");
 
             } else if (opcao != 2 ) {
-
+                System.out.println("---------------");
+                System.out.println("Opção inválida!");
+                System.out.println("---------------");
             }
         } while (opcao != 2);
         

@@ -9,14 +9,20 @@ public class App {
         Scanner leia = new Scanner(System.in);
 
         String nome;
-        int idade, classificacao, opcao;
+        int idade, opcao;
         boolean entradaNegada = false;
 
-            System.out.println("Seu nome: ");
-            nome = leia.nextLine();
-
-            System.out.println("Sua idade: ");
-            idade = leia.nextInt();
+        System.out.println("-----------------");
+        System.out.println("DADOS DO INGRESSO");
+        System.out.println("-----------------");
+        
+        System.out.println("Seu nome: ");
+        nome = leia.nextLine();
+        System.out.println("-----------------");
+        
+        System.out.println("Sua idade: ");
+        idade = leia.nextInt();
+        System.out.println("-----------------");
 
         do {
             System.out.println("----------------------------------------------------");
@@ -32,21 +38,59 @@ public class App {
             opcao = leia.nextInt();
 
             if ( idade >= 10 && opcao == 1) {
-                System.out.println("Ingresso comprado");
+                System.out.println("------");
+                System.out.println("TICKET");
+                System.out.println("------");
+                System.out.println("Nome: " + nome);
+                System.out.println("Filme: Branca de Neve");
+                System.out.println("Ingresso: Adquirido");
+                System.out.println("---------------------");
                 break;
-            } else if ( idade >= 18 && (opcao == 2 || opcao == 5)) {
-                System.out.println("Ingresso comprado");
+            } else if ( idade >= 18 && opcao == 2) {
+                System.out.println("------");
+                System.out.println("TICKET");
+                System.out.println("------");
+                System.out.println("Nome: " + nome);
+                System.out.println("Filme: Premonição");
+                System.out.println("Ingresso: Adquirido");
+                System.out.println("-------------------");
                 break;
-            } else if (idade >= 14 && opcao == 3) {
-                System.out.println("Ingresso comprado");
+            }  else if (idade >= 14 && opcao == 3) {
+                System.out.println("------");
+                System.out.println("TICKET");
+                System.out.println("------");
+                System.out.println("Nome: " + nome);
+                System.out.println("Filme: Guerra dos Mundos");
+                System.out.println("Ingresso: Adquirido");
+                System.out.println("------------------------");
                 break;
             } else if (opcao == 4) {
-                System.out.println("Ingresso comprado");
+                System.out.println("------");
+                System.out.println("TICKET");
+                System.out.println("------");
+                System.out.println("Nome: " + nome);
+                System.out.println("Filme: Carros");
+                System.out.println("Ingresso: Adquirido");
+                System.out.println("-------------------");
                 break;
+            } else if ( idade >= 18 && opcao == 5) {
+                System.out.println("------");
+                System.out.println("TICKET");
+                System.out.println("------");
+                System.out.println("Nome: " + nome);
+                System.out.println("Filme: Jogos Mortais");
+                System.out.println("Ingresso: Adquirido");
+                System.out.println("--------------------");
+                break;
+            } else if (opcao < 1 || opcao > 5) {
+                System.out.println("-----------------------------------------");
+                System.out.println("Escolha apenas opções válidas!");
+                System.out.println("-----------------------------------------");
+                 entradaNegada = true;
             } else {
-                 System.out.println("-----------------------------------------");
-                 System.out.println("Idade não permitida! Escolha outro filme.");
-                 System.out.println("-----------------------------------------");
+                System.out.println("-----------------------------------------");
+                System.out.println("Idade não permitida! Escolha outro filme.");
+                System.out.println("-----------------------------------------");
                 entradaNegada = true;
             }
 
