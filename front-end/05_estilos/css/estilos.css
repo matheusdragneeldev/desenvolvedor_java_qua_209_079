@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 100px;
+    margin: 0px auto;
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    margin: 30px 0px;
+}
+
+form {
+    padding: 15px;
+}
+
+input, select {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    padding: 5px 15px;
+    margin: 30px 15px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.nome {
+    width: 20%;
+}
+
+.sobrenome {
+    width: 70%;
+}
+
+.telefone {
+    width: 20%;
+}
+
+.email {
+    width: 50%;
+}
+
+.genero {
+    width: 15%;
+}
+
+.cep {
+    width: 20%;
+}
+
+.cidade {
+    width: 15%;
+}
+
+.endereco {
+    width: 50%;
+}
+
+.escolaridade {
+    width: 20%;
+}
+
+.profissao {
+    width: 70%;
+}
+
+.cursos {
+    margin: 15px;
+    width: 100%;
+    padding: 5px 15px;
+    border-bottom: 1px solid black;
+}
+
+button {
+    width: 300px;
+    height: 60x;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 10px;
+    background: #16161d;
+    color: #ffffff;
+    transition: 0.5s ease;
+}
+
+button:hover {
+    color: #16161d;
+    background: #ffffff;
+    transition: 0.5s ease;
+}
